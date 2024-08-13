@@ -1,89 +1,38 @@
-body {
-    font-family: monospace;
-    text-align: center;
-    font-size: 2rem;
-    background-color: #fff;
-    transition: background-color 1s;
-}
+ body {
+            display: flex;
+            justify-content: center;
+            font-family: monospace;
+            text-align: center;
+            font-size: 35px;
+        }
 
-div {
-    display: flex;
-    justify-content: center;
-    margin-top: 150px;
-}
+        div {
+            display: flex;
+            justify-self: center;
+        }
 
-p {
-    color: black;
-    margin-top: 20px;
-    border-right: 4px solid black;
-    white-space: nowrap;
-    width: 28ch;
-    overflow: hidden;
-    animation: barraPiscando 0.5s linear infinite, textoDigitando steps(28) 2.5s;
-}
+        p {
+            margin-top: 200px;
+            width: 28ch;
+            border-right: 4px solid black;
+            overflow: hidden;
+            white-space: nowrap;
+            animation: textoPiscando linear infinite 0.5s, efeitoDigitacao steps(28) 2.5s;
+            
+        }
 
-@keyframes barraPiscando {
-    50% {
-        border-right: transparent;
-    }
-}
+        @keyframes textoPiscando {
+            50% {
+                border-right: transparent;
+            }
+        }
 
-@keyframes textoDigitando {
-    0% {
-        width: 0;
-    }
+        @keyframes efeitoDigitacao {
+            0% {
+                width: 0ch;
+            }
 
-    100% {
-        width: 28ch;
-    }
-}
-
-#container {
-    margin-top: 20px;
-}
-
-.button {
-    height: 30px;
-    width: 250px;
-    font-family: monospace;
-    font-size: 20px;
-    cursor: pointer;
-    background-color: #27272a;
-    color: white;
-    border: none;
-    border-radius: 7px;
-    transition: background-color 0.3s, color 0.3s;
-}
-
-.bodyCorTrocada {
-    background-color: #27272a;
-}
-
-.pCorTrocada {
-    color: white;
-    border-right: 4px solid white;
-}
-
-.buttonCorTrocada {
-    background-color: white;
-    color: black;
-}
-
-@media screen and (max-width: 767px) {
-    body {
-    font-family: monospace;
-    text-align: center;
-    font-size: 15px;
-    background-color: #fff;
-    transition: background-color 1s;
-}
-    p {
-    color: black;
-    margin-top: 20px;
-    border-right: 4px solid black;
-    white-space: nowrap;
-    width: 28ch;
-    overflow: hidden;
-    animation: barraPiscando 0.5s linear infinite, textoDigitando steps(28) 2.5s;
-}
-}
+            100% {
+                width: 28ch;
+            }
+        }
