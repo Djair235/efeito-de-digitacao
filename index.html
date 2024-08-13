@@ -4,17 +4,50 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Efeito de digitação</title>
-    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            font-family: monospace;
+            text-align: center;
+            font-size: 35px;
+        }
+
+        div {
+            display: flex;
+            justify-self: center;
+        }
+
+        p {
+            margin-top: 200px;
+            width: 28ch;
+            border-right: 4px solid black;
+            overflow: hidden;
+            white-space: nowrap;
+            animation: textoPiscando linear infinite 0.5s, efeitoDigitacao steps(28) 2.5s;
+            
+        }
+
+        @keyframes textoPiscando {
+            50% {
+                border-right: transparent;
+            }
+        }
+
+        @keyframes efeitoDigitacao {
+            0% {
+                width: 0ch;
+            }
+
+            100% {
+                width: 28ch;
+            }
+        }
+    </style>
 </head>
 <body>
     <div>
-        <p id="p1">Efeito de Digitação com CSS.</p>
+        <p>Efeito de digitação com CSS.</p>
     </div>
-
-    <div id="container">
-        <button type="button" class="button" id="button">Mudar cor do fundo</button>
-    </div>
-
-    <script src="javascript.js"></script>
 </body>
 </html>
