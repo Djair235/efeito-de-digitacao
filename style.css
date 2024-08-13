@@ -36,8 +36,7 @@
                 width: 28ch;
             }
         }
-
-         @media (width <= 700px) {
+        @media (max-width: 700px) {
             body {
                 font-size: 23px;
             }
